@@ -1,0 +1,43 @@
+$size: 950px;
+$sidebar_width: 20rem;
+
+/* Side Menu */
+.burger-menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    div {
+        width: 35px;
+        height: 5px;
+        background-color: white;
+        margin: 6px 0;
+    }
+}
+.sidebar {
+    position: fixed;
+    transition: 0.5s;
+    transform: translateX(-$sidebar_width);
+    width: $sidebar_width;
+    background-color: #3e4148;
+    height: 100%;
+    .sidebar-header {
+        display: flex;
+        .close-burger-menu {
+            background-color: transparent;
+            font-weight: bolder;
+            opacity: 0.5;
+            font-size: 13pt;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
+.sidebar.open {
+    transform: translateX(0);
+}
+
+@media screen and (max-width: $size) {
+    header {
+        background-color: transparent;
+    }
+}

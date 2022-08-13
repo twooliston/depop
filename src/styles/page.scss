@@ -1,0 +1,70 @@
+$size: 950px;
+$secondary_font_colour: #333333;
+$primary_background: #ffffff;
+$secondary_background: #333333;
+
+.page {
+    color: white;
+    margin: 40px 20%;
+    font-size: 25pt;
+    text-shadow:
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+     -1px 1px 0 #000,
+      1px 1px 0 #000;
+    p, div {
+        padding: 15px;
+    }
+}
+
+/* CSS */
+.button {
+  background-color: $primary_background;
+  border: 0px solid $secondary_background;
+  border-radius: 5px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:hover {
+  background-color: #eeeeee;
+}
+
+.button:active {
+  box-shadow: $secondary_background 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+.long-text {
+  font-size: 16pt;
+}
+
+.list {
+  font-size: 14pt;
+  padding: 10px;
+  li {
+    padding: 5px;
+  }
+}
+
+@media (min-width: $size) {
+  .button {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+@media screen and (max-width: $size) {
+  .page {
+    margin: 40px 20px;
+  }
+}
