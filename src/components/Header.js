@@ -21,11 +21,11 @@ const Header = () => {
   const isMobile = width <= 950;
 
   let pages = [
-    ["/", "Delphine's"],
-    ["/savoury", "Savoury"],
-    ["/sweet", "Sweet"],
-    ["/catering", "Catering"],
-    ["/about", "About Delphine"],
+    ["/", "Shop"],
+    ["/tops", "Tops"],
+    ["/bottoms", "Bottoms"],
+    ["/shoes", "Shoes"],
+    ["/everything", "Everything Else"],
   ];
 
   const openMenu = () => {

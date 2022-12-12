@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Contact = () => {
   return (
     <div className="page long-text">
-      <h1>Contact Delphine</h1>
+      <h1>Contact</h1>
       <p>
         If you have any questions, please see the <Link to="/faqs">FAQs</Link>.
         If your questions are still not answered, please fill out the
