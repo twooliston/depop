@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
-import Page from "../components/Page";
 
 const Home = () => {
-  let page = "home";
-  const depop_link = `https://webapi.depop.com/api/v1/shop/${process.env.REACT_APP_USER_ID}/products/?limit=24`;
   const [backendData, setBackendData] = useState({});
 
   useEffect(() => {
+    const depop_link = `https://webapi.depop.com/api/v1/shop/${process.env.REACT_APP_USER_ID}/products/?limit=24`;
     fetch(depop_link)
       .then((response) => response.json())
       .then((data) => setBackendData(data));
