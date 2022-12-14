@@ -7,24 +7,9 @@ const Home = () => {
   const [backendData, setBackendData] = useState({});
 
   useEffect(() => {
-    fetch(depop_link, {
-      method: "GET",
-      httpNodeCors: {
-        origin: "*",
-        methods: "GET,PUT,POST,DELETE",
-      },
-      headers: {
-        "Content-Type": "text/plain",
-      },
-    })
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => console.log("Error:", error));
-    // response.json())
-    // .then((data) => {
-    //   setBackendData(data);
-    // });
+    fetch(depop_link)
+      .then((response) => response.json())
+      .then((data) => setBackendData(data));
   }, []);
 
   console.log(backendData);
